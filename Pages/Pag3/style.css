@@ -1,0 +1,251 @@
+:root {
+    --bg-color: #0a0a0a;
+    --text-color: #ffffff;
+    --accent-color: #a8b2d1;
+    --card-bg: #1a1a1a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, .brand {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Header Styles */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hero Section (Outdoor) */
+.outdoor {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #111; /* Fallback */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.outdoor::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* Overlay for text readability */
+}
+
+.outdoor-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.outdoor h1 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.outdoor p {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.play-button {
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.1);
+}
+
+/* Explore Section */
+.explore {
+    padding: 5rem 10%;
+    background-color: var(--bg-color);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-desc {
+    max-width: 400px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.card:hover .card-img {
+    transform: scale(1.05);
+}
+
+.card-info {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 150px;
+    max-height: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card-name {
+    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+    color: black;
+    display: block;
+}
+
+.card-reference {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black
+}
+
+/* Journal Section */
+.journal {
+    padding: 5rem 10%;
+}
+
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.post-card {
+    background-color: transparent;
+}
+
+.post-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.post-date {
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-desc {
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Footer (Simple) */
+.footer {
+    padding: 2rem 5%;
+    font-size: 0.8rem;
+    color: #666;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .outdoor h1 { font-size: 3rem; }
+    .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .nav-links { display: none; } /* Simplified for mobile */
+}

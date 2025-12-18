@@ -1,0 +1,228 @@
+/* ANIMAÇÃO */
+@keyframes crescer {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+/* ESTRUTURA BASE */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+/* HEADER */
+.header {
+    background-color: #e5e5e5;
+    padding: 10px 20px;
+    border-bottom: 3px solid black;
+}
+
+.header__nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__item {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.header__item a {
+    text-decoration: none;
+    color: black;
+}
+
+.header__item a:hover {
+    text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.hero__banner {
+    max-width: 1000px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+.hero__image {
+    width: 300px;
+    border: 3px solid black;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Filtro aplicado no hover */
+.hero__image:hover {
+    background: linear-gradient(to left, white, black);
+    filter: invert(100%);
+}
+
+.hero__subtitle--mobile {
+    display: none;
+    font-family: 'Courier New', monospace;
+    font-size: large;
+}
+
+.hero__subtitle--desktop {
+    display: block;
+    font-family: 'Courier New', monospace;
+    font-size: large;
+}
+
+/* QUICK LINKS */
+.links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    background: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+}
+
+.links__item {
+    padding: 12px 50px;
+    margin: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    font-size: large;
+}
+
+.links__item:hover {
+    background: black;
+    color: white;
+}
+
+/* PROJECTS */
+.projects {
+    text-align: center;
+    padding: 10px;
+    background: #bdb9b9;
+}
+
+.projects__container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px;
+}
+
+/* PROJECT CARD */
+.project {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-width: 400px;
+    border: 3px solid black;
+    background: white;
+}
+
+.project:nth-child(2) {
+    background-color: #ddd;
+}
+
+.project__header {
+    padding: 8px;
+    background: #ddd;
+    border-bottom: 3px solid black;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+.project__img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.project__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-bottom: 10px;
+    padding: 0;
+    width: 100%;
+}
+
+.project__title {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 30px;
+    font-family: 'Courier New', monospace;
+}
+
+.project__body p {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    line-height: 1.6;
+    font-family: 'Courier New', monospace;
+}
+
+/* BOTÃO */
+.btn {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px 25px;
+    border: 2px solid black;
+    background: #eee;
+    font-family: 'Courier New', monospace;
+    font-size: large;
+    align-self: center;
+    margin-top: auto;
+}
+
+.btn--learn-more:hover {
+    color: white;
+    background: black;
+}
+
+/* ANIMAÇÃO DO CARD */
+.project:hover {
+    animation: crescer 0.3s ease-out forwards;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero__subtitle--desktop {
+        display: none;
+    }
+
+    .hero__subtitle--mobile {
+        display: block;
+    }
+
+    .project {
+        min-width: 300px;
+    }
+
+    .project__img {
+        height: 250px;
+        object-fit: stretch;
+    }
+
+    .hero__title {
+        font-size: 40px;
+    }
+}

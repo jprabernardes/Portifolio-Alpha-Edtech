@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Metadados Essenciais -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO e Descrição: Ajuda buscadores a entenderem o site -->
+    <meta
+      name="description"
+      content="Portfólio de Romualdo - Desenvolvedor Web focado em criar experiências digitais incríveis."
+    />
+    <title>Romualdo | Desenvolvedor Web</title>
+
+    <!-- Pré-carregamento de Fontes: Melhora a performance de carregamento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Folha de Estilos Principal -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Skip Link -->
+    <a href="#projects" class="skip-link">Pular para os projetos</a>
+
+    <!-- Header Fixo -->
+    <header class="header">
+      <!-- Nav container limita a largura do conteúdo para não esticar em telas grandes -->
+      <nav class="nav container" aria-label="Navegação Principal">
+        <!-- Logo Textual -->
+        <a href="#" class="logo">Romualdo<span class="dot">.</span></a>
+
+        <!-- Menu de Navegação -->
+        <ul class="nav-list">
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 
+        Seção Hero
+      -->
+      <section id="hero" class="hero container">
+        <div class="hero-content">
+          <span class="greeting">Olá, eu sou</span>
+          <!-- H1: O título mais importante da página (apenas 1 por página) -->
+          <h1 class="title">
+            Romualdo <br /><span class="highlight">Developer</span>
+          </h1>
+          <p class="subtitle">
+            Criando experiências digitais modernas, responsivas e acessíveis.
+          </p>
+          <!-- Call to Action (CTA) -->
+          <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+        </div>
+
+        <!-- Elemento Visual Decorativo -->
+        <div class="hero-visual">
+          <div class="code-block">
+            <div class="code-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <!-- Tag <pre> e <code> para mostrar código formatado -->
+            <pre><code><span class="keyword">const</span> <span class="var">dev</span> = {
+  <span class="prop">nome</span>: <span class="string">'Romualdo'</span>,
+  <span class="prop">skills</span>: [<span class="string">'HTML'</span>, <span class="string">'CSS'</span>, <span class="string">'JS'</span>],
+  <span class="prop">hardWorker</span>: <span class="bool">true</span>
+};</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Sobre Mim -->
+      <section id="about" class="about container">
+        <h2 class="section-title">Sobre Mim</h2>
+        <img
+          src="/assets/Photo.png"
+          alt="Foto de Romualdo"
+          class="about-photo"
+        />
+        <p class="about-text">
+          Sou formado em Biomedicina e atuo na área de Bioinformática. Sou
+          entusiasta da tecnologia, com interesse em transformar ideias em
+          código, tanto para o mundo científico quanto para o mundo digital.
+          Tenho como foco o desenvolvimento de interfaces limpas, eficientes e
+          acessíveis, priorizando a experiência do usuário. Este portfólio
+          representa meu processo contínuo de aprendizado e aprimoramento
+          técnico.
+        </p>
+      </section>
+
+      <!-- 
+        Seção Projetos
+        Organizada em um Grid Layout (definido no CSS)
+      -->
+      <section id="projects" class="projects container">
+        <h2 class="section-title">Projetos Recentes</h2>
+        <div class="projects-grid">
+          <!-- Projeto 1: Card Individual -->
+          <!-- <article> é semanticamente correto para conteúdo independente -->
+          <article class="project-card">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #6366f1, #a855f7)"
+            >
+              <img
+                src="./assets/Pag1.png"
+                alt="Preview do Projeto de Fungos"
+                class="project-thumb"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Projeto de Fungos</h3>
+              <p>Aplicação focada em mostrar informações sobre fungos.</p>
+              <!-- Tags de tecnologias usadas -->
+              <ul class="tags">
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+              <a
+                href="../Pages/Pag1/index.html"
+                target="_blank"
+                class="btn btn-sm"
+                >Ver Projeto</a
+              >
+            </div>
+          </article>
+
+          <!-- Projeto 2 -->
+          <article class="project-card">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #ec4899, #f43f5e)"
+            >
+              <img
+                src="./assets/Pag2.png"
+                alt="Preview do Gestão de Produtos"
+                class="project-thumb"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Gestão de Produtos</h3>
+              <p>
+                Sistema CRUD completo com validação, modais e tabela dinâmica.
+              </p>
+              <ul class="tags">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>Local Storage</li>
+              </ul>
+              <a
+                href="../Pages/Pag2/index.html"
+                target="_blank"
+                class="btn btn-sm"
+                >Ver Projeto</a
+              >
+            </div>
+          </article>
+
+          <!-- Projeto 3 -->
+          <article class="project-card">
+            <div
+              class="project-image"
+              style="background: linear-gradient(135deg, #10b981, #3b82f6)"
+            >
+              <img
+                src="./assets/Pag3.png"
+                alt="Preview do Projeto Fungoz!"
+                class="project-thumb"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Projeto Fungoz!</h3>
+              <p>
+                Landing page imersiva explorando o universo dos fungos com
+                manipulação avançada de DOM.
+              </p>
+              <ul class="tags">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>DOM Manipulation</li>
+              </ul>
+              <a
+                href="../Pages/Pag3/index.html"
+                target="_blank"
+                class="btn btn-sm"
+                >Ver Projeto</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Seção Contato -->
+      <section id="contact" class="contact container">
+        <h2 class="section-title">Vamos Conversar?</h2>
+        <p>Estou sempre aberto a novos desafios e parcerias.</p>
+        <a href="mailto:jpromualdo0@gmail.com" class="btn btn-outline"
+          >Entrar em Contato</a
+        >
+      </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>&copy; 2025 Romualdo. Todos os direitos reservados.</p>
+        <div class="social-links">
+          <a href="https://github.com/jprabernardes/" aria-label="GitHub"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/jo%C3%A3o-paulo-romualdo-alarc%C3%A3o-bernardes-6b2aba129/"
+            aria-label="LinkedIn"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
